@@ -67,28 +67,10 @@ def apply():
         if 'user' not in session:
             flash('Please login')
             return redirect(url_for('frontend.login'))
-
-        if form.validate_on_submit():
-            given_name = form.given_name.data
-            family_name = form.family_name.data
-            gender = form.gender.data
-            indigenous_status = form.indigenous_status.data
-            age = form.age.data
-            place_of_birth = form.place_of_birth.data
-            residential_address = form.residential_address.data
-            residence_status = form.residence_status.data
-            medicare = form.medicare.data
-            vaccine_history = form.vaccine_history.data
-            work_type = form.work_type.data
-            booker_description = form.booker_description.data
-            parking_required = form.parking_required.data
-            interpreter_required = form.interpreter_required.data
-
+        else:
             application = ApplicationClient.create_application(form)
             flash("Sumbitted. Please schedule your vaccination.")
-            return redirect(url_for('frontend.schedule'))
-        else:
-            flash("Errors")
+            redirect(url_for('frontend.schedule'))
 
     return render_template('application.html', form=form)
 
@@ -100,21 +82,10 @@ def schedule():
         if 'user' not in session:
             flash('Please login')
             return redirect(url_for('frontend.login'))
-
-        if form.validate_on_submit():
-            name = form.name.data
-            state = form.state.data
-            city = form.city.data
-            vaccination_cite = form.vaccination_cite.data
-            first_slot = form.first_slot.data
-            second_slot = form.second_slot.data
-            medical_condition = form.medical_condition.data
-
+        else:
             schedule = ScheduleClient.create_schedule(form)
             flash("Your appointment is submmited.")
             return redirect(url_for('frontend.thanks'))
-        else:
-            flash("Errors")
 
     return render_template('schedule.html', form=form)
 

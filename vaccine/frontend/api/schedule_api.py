@@ -7,14 +7,14 @@ from . import Schedule_API_URL
 class ScheduleClient:
     @staticmethod
     def get_schedules():
-        header = {'Authorization': session['user_api_key']}
+        #header = {'Authorization': session['user_api_key']}
         response = requests.get(Schedule_API_URL +
-                                '/api/schedule/all', headers=header)
+                                '/api/schedule/all') #headers=header)
         return response.json()
 
     @staticmethod
     def create_schedule(form):
-        header = {'Authorization': session['user_api_key']}
+        #header = {'Authorization': session['user_api_key']}
         payload = {
             'name': form.name.data,
             'state': form.state.data,
@@ -26,7 +26,7 @@ class ScheduleClient:
         }
 
         response = requests.post(Schedule_API_URL + '/api/schedule/create',
-                                 data=payload, headers=header)
+                                 data=payload) #headers=header)
         return response.json()
 
     @staticmethod

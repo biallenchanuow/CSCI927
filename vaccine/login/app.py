@@ -28,13 +28,10 @@ def load_user_from_request(request):
         user = models.User.query.filter_by(api_key=api_key).first()
         if user:
             return user
-
     return None
 
 
 class CustomSessionInterface(SecureCookieSessionInterface):
-    """Prevent creating session from API requests."""
-
     def save_session(self, *args, **kwargs):
         if g.get('login_via_header'):
             return

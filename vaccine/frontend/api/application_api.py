@@ -1,20 +1,22 @@
 import requests
 from werkzeug.wrappers import response
-from flask import session
-from . import Application_API_URL
+from flask import session, request
+#from . import Application_API_URL, User_API_URL
+
+Application_API_URL = 'http://127.0.0.1:5002/'
 
 
 class ApplicationClient:
     @staticmethod
     def get_applications():
-        header = {'Authorization': session['user_api_key']}
+        #header = {'Authorization': session['user_api_key']}
         response = requests.get(Application_API_URL +
-                                '/api/application/all', headers=header)
+                                '/api/application/all')  # headers=header)
         return response.json()
 
     @staticmethod
     def create_application(form):
-        header = {'Authorization': session['user_api_key']}
+        #header = {'Authorization': session['user_api_key']}
         payload = {
             'given_name': form.given_name.data,
             'family_name': form.family_name.data,
@@ -33,7 +35,7 @@ class ApplicationClient:
         }
 
         response = requests.post(Application_API_URL + '/api/application/create',
-                                 data=payload, headers=header)
+                                 data=payload)  # headers=header)
         return response.json()
 
     @staticmethod
