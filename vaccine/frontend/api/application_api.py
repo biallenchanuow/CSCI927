@@ -1,9 +1,9 @@
 import requests
 from werkzeug.wrappers import response
 from flask import session, request
-#from . import Application_API_URL, User_API_URL
+from . import Application_API_URL
 
-Application_API_URL = 'http://127.0.0.1:5002/'
+
 
 
 class ApplicationClient:

@@ -70,7 +70,7 @@ def apply():
         else:
             application = ApplicationClient.create_application(form)
             flash("Sumbitted. Please schedule your vaccination.")
-            redirect(url_for('frontend.schedule'))
+            return redirect(url_for('frontend.schedule'))
 
     return render_template('application.html', form=form)
 

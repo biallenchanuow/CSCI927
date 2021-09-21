@@ -11,3 +11,4 @@ Mako==1.1.5
 MarkupSafe==2.0.1
 SQLAlchemy==1.4.23
 Werkzeug==2.0.1
+requests==2.26.0
