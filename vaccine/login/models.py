@@ -29,6 +29,8 @@ class User(db.Model, UserMixin):
         return {
             'id': self.id,
             'username': self.username,
+            'email': self.email,
+            'phone': self.phone,
             'is_admin': self.is_admin,
             'api_key': self.api_key,
             'is_active': self.is_active,

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+
+{% block pageContent %}
+<div class="container mt-5" style="max-width: 960px">
+    <div class="py-5 text-center">
+        <h2>Personal Information Form</h2>
+        <p class="lead">This form is required and will assist us to arrange vaccination for you.</p>
+    </div>
+
+
+    <div class="col-lg-12">
+        <form method="post">
+            {{ form.hidden_tag() }}
+            <h4 class="mb-3">Basic Information</h4>
+            <div class="row g-3">
+                <div class="form-group col-sm-6">
+                    {{ form.given_name.label(class_="form-label") }}:
+                    {{ form.given_name(class_="form-control") }}
+                </div>
+                <div class="form-group col-sm-6">
+                    {{ form.family_name.label(class_="form-label") }}:
+                    {{ form.family_name(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-6">
+                    {{ form.gender.label(class_="form-label") }}:
+                    {{ form.gender(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-6">
+                    {{ form.indigenous_status.label(class_="form-label") }}:
+                    {{ form.indigenous_status(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-6">
+                    {{ form.age.label(class_="form-label") }}:
+                    {{ form.age(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-6">
+                    {{ form.place_of_birth.label(class_="form-label") }}:
+                    {{ form.place_of_birth(class_="form-control") }}
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <h4 class="mb-3">Details</h4>
+            <div class="row g-3">
+                <div class="form-group col-sm-12">
+                    {{ form.residential_address.label(class_="form-label") }}:
+                    {{ form.residential_address(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-12">
+                    {{ form.residence_status.label(class_="form-label") }}:
+                    {{ form.residence_status(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-6">
+                    {{ form.medicare.label(class_="form-label") }}
+                    {{ form.medicare(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-6">
+                    {{ form.vaccine_history.label(class_="form-label") }}
+                    {{ form.vaccine_history(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-12">
+                    {{ form.work_type.label(class_="form-label") }}:
+                    {{ form.work_type(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-12">
+                    {{ form.booker_description.label(class_="form-label") }}:
+                    {{ form.booker_description(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-6">
+                    {{ form.parking_required.label(class_="form-label") }}
+                    {{ form.interpreter_required(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-6">
+                    {{ form.interpreter_required.label(class_="form-label") }}
+                    {{ form.interpreter_required(class_="form-control") }}
+                </div>
+
+                <div class="col text-center">
+                    {{ form.submit(class="w-25 btn btn-primary mt-3")}}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

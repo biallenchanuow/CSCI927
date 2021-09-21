@@ -35,7 +35,9 @@ class UserClient:
         user = None
         payload = {
             'username': form.username.data,
-            'password': form.password.data
+            'password': form.password.data,
+            'email': form.email.data,
+            'phone': form.phone.data
         }
 
         url = User_API_URL + '/api/user/create'

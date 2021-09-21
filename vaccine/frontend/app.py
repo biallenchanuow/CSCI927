@@ -2,10 +2,11 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
 from routes import blueprint
+
 app = Flask(__name__, static_folder='static')
 
-app.config['SECRET_KEY'] = 'KwsJpGfCDlcP77okfHAtpbo-F_c'
-app.config['WTF_CSRF_SECRET_KEY'] = 'yLnLKAJ3UuK8cEqmNucvLAuusjY'
+app.config['SECRET_KEY'] = 'v8hmlqFIixw3wXp19wEisw'
+app.config['WTF_CSRF_SECRET_KEY'] = 'Ln0TIVNQzkCbaJYPCdgryg'
 app.config['UPLOAD_FOLDER'] = 'static/images'
 app.register_blueprint(blueprint)
 
@@ -24,4 +25,4 @@ def load_user(user_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True)

@@ -23,6 +23,8 @@ def create_user():
     try:
         user = User()
         user.username = request.form["username"]
+        user.phone = request.form["phone"]
+        user.email = request.form["email"]
         user.password = generate_password_hash(request.form['password'],
                                                method='sha256')
 
