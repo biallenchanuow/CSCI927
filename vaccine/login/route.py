@@ -77,6 +77,24 @@ def user_exists(username):
     return jsonify({"result": False}), 404
 
 
+@user_blueprint.route('/<phone>/exists', methods=['GET'])
+def phone_exists(phone):
+    phone = User.query.filter_by(phone=phone).first()
+    if phone:
+        return jsonify({"result": True}), 200
+
+    return jsonify({"result": False}), 404
+
+
+@user_blueprint.route('/<email>/exists', methods=['GET'])
+def email_exists(email):
+    email = User.query.filter_by(email=email).first()
+    if email:
+        return jsonify({"result": True}), 200
+
+    return jsonify({"result": False}), 404
+
+
 @user_blueprint.route('/', methods=['GET'])
 def get_current_user():
     if current_user.is_authenticated:
