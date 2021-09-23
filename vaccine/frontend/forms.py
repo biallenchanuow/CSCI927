@@ -30,19 +30,19 @@ class ApplicationForm(FlaskForm):
     residential_address = StringField(
         'Current Living Address', validators=[DataRequired()])
     residence_status = SelectField('Residence Status', choices=[
-        'Eligible Australian Resident', 'Ineligible Overseas Resident', 'Reciprocal Overseas Resident', 'Unknown'])
+        'Eligible Australian Resident', 'Ineligible Overseas Resident', 'Reciprocal Overseas Resident', 'Unknown'], validators=[DataRequired()])
     medicare = SelectField('Do you have a medicare card?', choices=[
-                           'Yes', 'No'])
+                           'Yes', 'No'], validators=[DataRequired()])
     vaccine_history = SelectField('Have you previously get any COVID-19 vaccince?',
-                                  choices=['Yes', 'No'])
+                                  choices=['Yes', 'No'], validators=[DataRequired()])
     work_type = SelectField('Types of work that best applies to you', choices=[
-                            'General public', 'Border workers', 'Carer', 'Correctional center', 'Frontline health care worker', 'Other health care workers', 'Quarantine facility workers'], )
+                            'General public', 'Border workers', 'Carer', 'Correctional center', 'Frontline health care worker', 'Other health care workers', 'Quarantine facility workers'], validators=[DataRequired()])
     booker_description = StringField(
         'Description that best applies to you', validators=[DataRequired()])
     parking_required = SelectField('Accessibility Parking Required?',
-                                   choices=['Yes', 'No'])
+                                   choices=['Yes', 'No'], validators=[DataRequired()])
     interpreter_required = SelectField('Required an Interpreter?',
-                                       choices=['Yes', 'No'])
+                                       choices=['Yes', 'No'], validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 

@@ -4,8 +4,6 @@ from flask import session, request
 from . import Application_API_URL
 
 
-
-
 class ApplicationClient:
     @staticmethod
     def get_applications():

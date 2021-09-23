@@ -5,10 +5,14 @@ from datetime import datetime
 
 db = SQLAlchemy()
 
+# Initiating the app
+
 
 def init_app(app):
     db.app = app
     db.init_app(app)
+
+# Create the data model
 
 
 class User(db.Model, UserMixin):

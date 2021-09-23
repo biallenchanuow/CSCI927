@@ -29,10 +29,8 @@ def create_user():
                                                method='sha256')
 
         user.is_admin = False
-
         db.session.add(user)
         db.session.commit()
-
         response = {'message': 'User Created', 'result': user.serialize()}
     except Exception as e:
         print(str(e))
