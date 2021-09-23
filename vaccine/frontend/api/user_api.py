@@ -52,3 +52,15 @@ class UserClient:
         url = User_API_URL + 'api/user/' + username + '/exists'
         response = requests.get(url)
         return response.status_code == 200
+
+    @staticmethod
+    def email_exists(email):
+        url = User_API_URL + 'api/user/' + email + '/exist'
+        response = requests.get(url)
+        return response.status_code == 200
+
+    @staticmethod
+    def phone_exists(phone):
+        url = User_API_URL + 'api/user/' + phone
+        response = requests.get(url)
+        return response.status_code == 200

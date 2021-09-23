@@ -8,41 +8,41 @@ volumes:
   
 services:
   user-service:
-    container_name: user-service-c
+    container_name: user-service
     build:
       context: ../login
     ports: 
       - "5001:5001"
     volumes:
-      - userapp:/userapp
+      - loginapp:/loginapp
     restart: always
   
   application-service:
-    container_name: application-service-c
+    container_name: application-service
     build:
       context: ../application_form
     ports: 
       - "5002:5002"
     volumes:
-      - applicationapp:/applicationapp
+      - appformapp:/appformapp
     restart: always
   
   schedule-service:
-    container_name: schedule-service-c
+    container_name: schedule-service
     build:
       context: ../schedule
     ports: 
       - "5003:5003"
     volumes:
-      - scheduleapp:/scheduleapp
+      - schformapp:/schformapp
     restart: always
   
   frontend-service:
-    container_name: frontend-service-c
+    container_name: frontend-service
     build:
       context: ../frontend
     ports: 
       - "5000:5000"
     volumes:
-      - frontendapp:/frontendapp
+      - frontapp:/frontapp
     restart: always

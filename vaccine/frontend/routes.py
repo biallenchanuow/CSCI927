@@ -19,8 +19,17 @@ def register():
     if request.method == 'POST':
         if form.validate_on_submit():
             username = form.username.data
+            email = form.email.data
+            phone = form.phone.data
+
             if UserClient.user_exists(username):
                 flash("Please try another user name")
+                return render_template('register.html', form=form)
+            elif UserClient.email_exists(email):
+                flash("Please try another email address")
+                return render_template('register.html', form=form)
+            elif UserClient.phone_exists(phone):
+                flash("Please try another phone number")
                 return render_template('register.html', form=form)
             else:
                 user = UserClient.create_user(form)
