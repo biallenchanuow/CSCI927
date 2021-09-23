@@ -1,7 +1,7 @@
 FROM python:3.9 
-COPY requirements.txt /userapp/requirements.txt
-WORKDIR /userapp
+COPY requirements.txt /loginapp/requirements.txt
+WORKDIR /loginapp
 RUN pip install -r requirements.txt
-COPY . /userapp
+COPY . /loginapp
 ENTRYPOINT [ "python" ]
 CMD [ "app.py" ]

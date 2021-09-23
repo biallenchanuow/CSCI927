@@ -1,10 +1,10 @@
 version: '3.8'
 
 volumes:
-  userapp:
-  applicationapp:
-  scheduleapp:
-  frontendapp:
+  loginapp:
+  appformapp:
+  schformapp:
+  frontapp:
   
 services:
   user-service:

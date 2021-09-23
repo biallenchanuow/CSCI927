@@ -1,7 +1,7 @@
 FROM python:3.9 
-COPY requirements.txt /frontendapp/requirements.txt
-WORKDIR /frontendapp
+COPY requirements.txt /frontapp/requirements.txt
+WORKDIR /frontapp
 RUN pip install -r requirements.txt
-COPY . /frontendapp
+COPY . /frontapp
 ENTRYPOINT [ "python" ]
 CMD [ "app.py" ]

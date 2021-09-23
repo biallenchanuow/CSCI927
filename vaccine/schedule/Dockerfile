@@ -1,7 +1,7 @@
 FROM python:3.9 
-COPY requirements.txt /scheduleapp/requirements.txt
-WORKDIR /scheduleapp
+COPY requirements.txt /schformapp/requirements.txt
+WORKDIR /schformapp
 RUN pip install -r requirements.txt
-COPY . /scheduleapp
+COPY . /schformapp
 ENTRYPOINT [ "python" ]
 CMD [ "app.py" ]
