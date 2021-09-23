@@ -64,13 +64,17 @@ def logout():
 def apply():
     form = forms.ApplicationForm()
     if request.method == 'POST':
-        if 'user' not in session:
-            flash('Please login')
-            return redirect(url_for('frontend.login'))
-        else:
+        # if 'user' not in session:
+        #flash('Please login')
+        # return redirect(url_for('frontend.login'))
+
+        if form.validate_on_submit():
+            given_name = form.given_name.data
             application = ApplicationClient.create_application(form)
             flash("Sumbitted. Please schedule your vaccination.")
             return redirect(url_for('frontend.schedule'))
+        else:
+            flash("Errors")
 
     return render_template('application.html', form=form)
 
