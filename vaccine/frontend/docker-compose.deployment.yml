@@ -8,7 +8,7 @@ volumes:
   
 services:
   user-service:
-    container_name: user
+    container_name: user-server
     build:
       context: ../login
     ports: 
@@ -18,7 +18,7 @@ services:
     restart: always
   
   application-service:
-    container_name: application
+    container_name: application-server
     build:
       context: ../application_form
     ports: 
@@ -28,7 +28,7 @@ services:
     restart: always
   
   schedule-service:
-    container_name: schedule
+    container_name: schedule-server
     build:
       context: ../schedule
     ports: 
@@ -38,7 +38,7 @@ services:
     restart: always
   
   frontend-service:
-    container_name: frontend
+    container_name: frontend-server
     build:
       context: ../frontend
     ports: 
