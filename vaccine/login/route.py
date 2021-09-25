@@ -12,7 +12,7 @@ def get_all_users():
     all_user = User.query.all()
     result = [user.serialize() for user in all_user]
     response = {
-        'message': 'Returning all users',
+        # 'message': 'Returning all users',
         'result': result
     }
     return jsonify(response)
@@ -99,3 +99,11 @@ def get_current_user():
         return jsonify({'result': current_user.serialize()}), 200
     else:
         return jsonify({'message': "User not logged in"}), 401
+
+
+@user_blueprint.route('/delete/<int:id>')
+def delete(id):
+    delete_user = User.query.get_or_404(id)
+    db.session.delete(delete_user)
+    db.session.commit()
+    return jsonify({'message': 'user deleted.'})

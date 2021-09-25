@@ -1,7 +1,10 @@
 from flask import Flask
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 from routes import blueprint
+
 
 app = Flask(__name__, static_folder='static')
 
@@ -9,7 +12,7 @@ app.config['SECRET_KEY'] = 'v8hmlqFIixw3wXp19wEisw'
 app.config['WTF_CSRF_SECRET_KEY'] = 'Ln0TIVNQzkCbaJYPCdgryg'
 app.config['UPLOAD_FOLDER'] = 'static/images'
 app.register_blueprint(blueprint)
-
+admin = Admin(app)
 
 login_manager = LoginManager(app)
 login_manager.init_app(app)

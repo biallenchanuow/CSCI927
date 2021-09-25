@@ -3,6 +3,8 @@ from flask.sessions import SecureCookieSessionInterface
 from flask_migrate import Migrate
 from flask_login import LoginManager
 import models
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 from route import user_blueprint
 
 app = Flask(__name__)
@@ -13,6 +15,9 @@ models.init_app(app)
 app.register_blueprint(user_blueprint)
 login_manager = LoginManager(app)
 migrate = Migrate(app, models.db)
+admin = Admin(app)
+
+admin.add_view(ModelView(models.User, models.db.session))
 
 
 @login_manager.user_loader

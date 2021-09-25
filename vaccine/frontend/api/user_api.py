@@ -22,12 +22,12 @@ class UserClient:
 
     @staticmethod
     def get_user():
-        headers = {
-            'Authorization': session['user_api_key']
-        }
+        # headers = {
+        # 'Authorization': session['user_api_key']
+        # }
 
-        url = User_API_URL + '/api/user'
-        response = requests.get(url, headers=headers)
+        url = User_API_URL + '/api/user/all'
+        response = requests.get(url)  # headers=headers)
         return response.json()
 
     @staticmethod
@@ -64,3 +64,9 @@ class UserClient:
         url = User_API_URL + 'api/user/' + phone
         response = requests.get(url)
         return response.status_code == 200
+
+    @staticmethod
+    def user_admin():
+        url = User_API_URL + 'admin/'
+        response = requests.get(url)
+        return response.json()

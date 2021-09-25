@@ -2,17 +2,15 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash
 from datetime import datetime
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 
 db = SQLAlchemy()
-
-# Initiating the app
 
 
 def init_app(app):
     db.app = app
     db.init_app(app)
-
-# Create the data model
 
 
 class User(db.Model, UserMixin):

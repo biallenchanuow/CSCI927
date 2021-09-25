@@ -45,3 +45,11 @@ def create_application():
         response = {'message': 'Application create failed'}
 
     return jsonify(response)
+
+
+@application_blueprint.route('/delete/<int:id>')
+def delete(id):
+    delete_application = Application.query.get_or_404(id)
+    db.session.delete(delete_application)
+    db.session.commit()
+    return jsonify({'message': 'Application deleted'})

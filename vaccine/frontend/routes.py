@@ -110,3 +110,6 @@ def thanks():
         return redirect(url_for('frontend.login'))
 
     return render_template('thankyou.html')
+
+
+

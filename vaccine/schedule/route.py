@@ -38,3 +38,11 @@ def create_schedule():
         response = {'message': 'Scheduled failed'}
 
     return jsonify(response)
+
+
+@schedule_blueprint.route('/delete/<int:id>')
+def delete(id):
+    delete_schedule = Schedule.query.get_or_404(id)
+    db.session.delete(delete_schedule)
+    db.session.commit()
+    return jsonify({'message': 'Schedule deleted'})
