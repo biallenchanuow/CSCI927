@@ -22,12 +22,12 @@ class UserClient:
 
     @staticmethod
     def get_user():
-        # headers = {
-        # 'Authorization': session['user_api_key']
-        # }
+        headers = {
+            'Authorization': session['user_api_key']
+        }
 
-        url = User_API_URL + '/api/user/all'
-        response = requests.get(url)  # headers=headers)
+        url = User_API_URL + '/api/user/'
+        response = requests.get(url, headers=headers)
         return response.json()
 
     @staticmethod
