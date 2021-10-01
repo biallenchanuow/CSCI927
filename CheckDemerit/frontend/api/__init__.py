@@ -1,0 +1,4 @@
+USER_API_URL = 'http://127.0.0.1:5001'
+CHECKPOINTS_API_URL = 'http://127.0.0.1:5002'
+DOWNLOAD_API_URL = 'http://download-server:5003'
+CHANGEADDRESS_API_URL = 'http://127.0.0.1:5004'
