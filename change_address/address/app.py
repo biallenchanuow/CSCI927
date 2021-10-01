@@ -19,4 +19,4 @@ admin.add_view(ModelView(Address, db.session))
 migrate = Migrate(app, db)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=3001)
+    app.run(debug=True, port=3002)
