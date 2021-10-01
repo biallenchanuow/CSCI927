@@ -198,9 +198,12 @@ def change_address():
 
         url = CHANGEADDRESS_API_URL + f'/api/change-address/{email}'
         response = requests.post(url, data=data)
+
         if response:
-            return render_template(url_for('blueprint.home'))
-        return render_template('change-address.html')
+            return redirect(url_for('blueprint.home'))
+        else:
+            flash("Update unsuccessful")
+
     return render_template('change-address.html')
 
 
