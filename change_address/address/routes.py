@@ -88,8 +88,7 @@ def login():
         user.update_api_key()
         db.session.commit()
         login_user(user)
-        response = {'message': 'logged in ',
-                    'api_key': user.api_key}
+        response = {'message': 'logged in ', 'api_key': user.api_key}
         return make_response(jsonify(response), 200)
 
     response = {'message': 'Access denied'}
@@ -122,6 +121,6 @@ def get_current_user():
 
 
 @user_blueprint.route("/<string:email>", methods=['GET'])
-def current_user(email):
+def current_user1(email):
     user_info = Address.query.filter_by(email=email).first()
     return user_info.serialize()

@@ -55,30 +55,33 @@ def login():
 
 @blueprint.route('/address', methods=['GET', 'POST'])
 def address():
-    email = session['user']['email']
-    form = forms.AddressForm()
-    if request.method == 'GET':
-        url = 'http://127.0.0.1:3001/' + f'/api/user/{email}'
-        current_user = requests.get(url).json()
+    if 'user' not in session:
+        flash('Please login')
+        return redirect(url_for('frontend.login'))
+    else:
+        email = session['user']['email']
+        form = forms.AddressForm()
+        if request.method == 'GET':
+            url = 'http://127.0.0.1:3001/' + f'/api/user/{email}'
+            current_user = requests.get(url).json()
 
-        #current_user = UserClient.get_user()
-        first_name = current_user['first_name']
-        last_name = current_user['last_name']
-        gender = current_user['gender']
-        dob = current_user['dob']
-        email = current_user['email']
-        licence_no = current_user['licence_no']
-        return render_template('address.html', first_name=first_name, last_name=last_name, gender=gender, dob=dob, email=email, licence_no=licence_no, form=form)
+            first_name = current_user['first_name']
+            last_name = current_user['last_name']
+            gender = current_user['gender']
+            dob = current_user['dob']
+            email = current_user['email']
+            licence_no = current_user['licence_no']
+            return render_template('address.html', first_name=first_name, last_name=last_name, gender=gender, dob=dob, email=email, licence_no=licence_no, form=form)
 
-    if request.method == 'POST':
-        if form.validate_on_submit():
-            zipcode = form.zipcode.data
-            address = AddressClient.update(form)
-            flash("Update successful")
-            return redirect(url_for('frontend.thanks'))
-        else:
-            flash("Errors")
-            return render_template('address.html', form=form)
+        if request.method == 'POST':
+            if form.validate_on_submit():
+                zipcode = form.zipcode.data
+                address = AddressClient.update(form)
+                flash("Update successful")
+                return redirect(url_for('frontend.thanks'))
+            else:
+                flash("Errors")
+                return render_template('address.html', form=form)
     return render_template('address.html', form=form)
 
 
