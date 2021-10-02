@@ -10,9 +10,9 @@ blueprint = Blueprint('frontend', __name__)
 def address():
     form = forms.AddressForm()
     if request.method == 'POST':
-        # if 'user' not in session:
-        # flash('Please login')
-        # return redirect(url_for('frontend.login'))
+        if 'user' not in session:
+            flash('Please login')
+            return redirect(url_for('frontend.login'))
 
         if form.validate_on_submit():
             zipcode = form.zipcode.data
