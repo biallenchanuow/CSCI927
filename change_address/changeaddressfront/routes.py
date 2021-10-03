@@ -62,7 +62,7 @@ def address():
         email = session['user']['email']
         form = forms.AddressForm()
         if request.method == 'GET':
-            url = 'http://127.0.0.1:3001/' + f'/api/user/{email}'
+            url = 'http://address:3001/' + f'/api/user/{email}'
             current_user = requests.get(url).json()
 
             first_name = current_user['first_name']
