@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Sign Up{% endblock %}</title>
     <script>
       function editDetails(){
@@ -18,9 +19,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbar">
             <div class="navbar-nav">
+                <a class="navbar-brand" href="#">Avatar Service Transport Portal</a>
                 <a class="nav-item nav-link" id="login" href="/login">Login</a>
-                <a class="nav-item nav-link" id="signup" href="/sign-up">Sign Up</a>
-                <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
                 <a class="nav-item nav-link" id="home" href="/">Home</a>
             </div>
         </div>
@@ -48,22 +48,99 @@
     {% endif %}
     {% endwith %}
 
-    <div class="container">
-        {% block content %}
-        <form method="POST">
-            <h3 align="center">Sign Up</h3>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"/>
-            </div>
-            <div class="form-group">
-                <label for="password1">Password</label>
-                <input type="password" class="form-control" id="password1" name="password" placeholder="Enter password"/>
-            </div>
-            <br />
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        {% endblock %}
+    <div class="container" style="max-width: 960px; margin-left: auto; margin-right: auto">
+        <div class="py-5 text-center">
+            <h2>Driver Sign Up Form</h2>
+            <p class="lead">Please fill out your registration details below.</p>
+        </div>
+
+        <div class="col-lg-12">
+            <form method="POST">
+                <div class="row g-5 justify-content-center">
+                    <div class="col-md-7 col-lg-8">
+                        <h4 class="mb-3">Account Details</h4>
+                        <div class="form-group col-sm-6">
+                            {{ form.email.label(class_="form-label") }}:
+                            {{ form.email(class_="form-control") }}
+                        </div>
+                        <br />
+                        <div class="form-group col-sm-6">
+                            {{ form.password.label(class_="form-label") }}:
+                            {{ form.password(class_="form-control") }}
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div class="row g-5 justify-content-center"  id="display">
+                  <div class="col-md-7 col-lg-8">
+                    <h4 class="mb-3">Driver Details</h4>
+                      <div class="row g-3">
+                        <div class="form-group col-sm-6">
+                            {{ form.first_name.label(class_="form-label") }}:
+                            {{ form.first_name(class_="form-control") }}
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            {{ form.last_name.label(class_="form-label") }}:
+                            {{ form.last_name(class_="form-control") }}
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            {{ form.gender.label(class_="form-label") }}:
+                            {{ form.gender(class_="form-control") }}
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            {{ form.dob.label(class_="form-label")}}:
+                            {{ form.dob(class="form-control") }}
+
+                        </div>
+
+<!--                        <div class="form-group col-sm-6">-->
+<!--                            {{ form.dob.label(class_="form-label") }}:-->
+<!--                            {{ form.dob(class_="form-control") }}-->
+<!--                        </div>-->
+
+                        <div class="form-group col-sm-6">
+                            {{ form.licence_no.label(class_="form-label") }}:
+                            {{ form.licence_no(class_="form-control") }}
+                        </div>
+
+                        <div class="form-group col-m-3">
+                            {{ form.address1.label(class_="form-label") }}:
+                            {{ form.address1(class_="form-control") }}
+                        </div>
+                        <div class="form-group col-m-3">
+                            {{ form.address2.label(class_="form-label") }}:
+                            {{ form.address2(class_="form-control") }}
+                        </div>
+                        <div class="form-group col-sm-6">
+                            {{ form.country.label(class_="form-label") }}:
+                            {{ form.country(class_="form-control") }}
+                        </div>
+                        <div class="form-group col-sm-6">
+                            {{ form.state.label(class_="form-label") }}:
+                            {{ form.state(class_="form-control") }}
+                        </div>
+                        <div class="form-group col-sm-6">
+                            {{ form.zipcode.label(class_="form-label") }}:
+                            {{ form.zipcode(class_="form-control") }}
+                        </div>
+
+                      <hr class="my-4">
+
+                      <button class="w-100 btn btn-primary btn-lg" type="submit" onClick="confirm()" style="background-color:#071630">Confirm</button>
+                      <p class="fs-6 text-muted" align="center">If you have an account, you can <a href="/login">Login</a></p>
+
+                    </div>
+                  </div>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
+<footer>
+
+</footer>
 </html>

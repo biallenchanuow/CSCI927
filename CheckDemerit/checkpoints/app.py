@@ -2,8 +2,8 @@ from flask import Flask
 from flask_migrate import Migrate
 from os import path
 from flask_login import LoginManager
-from checkpoints.models import UserDemerit, db
-from checkpoints.routes import blueprint
+from models import UserDemerit, db
+from routes import blueprint
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 
@@ -31,5 +31,8 @@ def create_database(app):
 
 create_database(app)
 
+# if __name__ == '__main__':
+#     app.run(debug=True, port=5002)
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5002)
+    app.run(host='0.0.0.0', port=4002)

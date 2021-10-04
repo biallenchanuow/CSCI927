@@ -1,28 +1,19 @@
 import requests
 from flask import session, jsonify
-from frontend.api import USER_API_URL
-from werkzeug.security import generate_password_hash, check_password_hash
+from . import USER_API_URL, CHECKPOINTS_API_URL
 
 
 class UserAPI:
     @staticmethod
-    def login(email, password):
-        data = {
-            'email': email,
-            'password': password
-        }
-
+    def login(data):
         url = USER_API_URL + '/api/user/login'
+        response = requests.get(url=url, data=data)
 
-        response = requests.post(url, data=data)
         if response:
-            return jsonify(data.get('email'))
+            return response.json()
 
     @staticmethod
     def get_user(email):
-        # headers = {
-        #     'email': email
-        # }
         url = USER_API_URL + f'/api/user/{email}'
         response = requests.get(url)
         return response.json
@@ -36,10 +27,21 @@ class UserAPI:
             return user
 
     @staticmethod
-    def edit_details(email, data):
-        url = USER_API_URL + f'/api/user/edit-details/{email}'
-        response = requests.post(url, data=data)
+    def user_demerit_fetch(data):
+        url = CHECKPOINTS_API_URL + '/api/checkpoints/user-fetch'
+        response = requests.request("POST", url=url, data=data)
         if response:
             user = response.json()
             return user
+
+    @staticmethod
+    def edit_details(email, data):
+        url = USER_API_URL + '/api/user/edit-details/' + email
+        response = requests.request("POST", url=url, data=data)
+        updated_information = {}
+        if response:
+            return response
+        return updated_information
+
+
 

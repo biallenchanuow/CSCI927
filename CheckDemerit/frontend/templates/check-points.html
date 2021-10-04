@@ -3,16 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Check Demerit Points</title>
-    <style>
-      #panel{
-      margin-left:400px;
-      width:1500px
-      }
-    </style>
     <script>
       function generate(){
-        var lc = {{licence_no|tojson}};
-        var download_url = 'download/' + lc
+        var download_url = 'check-points/download'
         window.open(download_url);
       }
     </script>
@@ -26,6 +19,51 @@
       </symbol>
     </svg>
 
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+        {% if category == 'error' %}
+        <div class="alert alert-danger alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <!-- <a class="navbar-brand" href="#">Avatar Service Transport Portal</a> -->
+                {% if not session['user'] %}
+                <a class="navbar-brand" href="#">Avatar Service Transport Portal</a>
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/login">Login</a>
+
+                {% else %}
+                <a class="navbar-brand" href="#">Avatar Service Transport Portal</a>
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/check-points">Check Demerit Points</a>
+                <a class="nav-link" href="/check-points/download">Download Report</a>
+                <a class="nav-link" href="/logout">Logout</a>
+                {% endif %}
+                
+            </div>
+        </div>
+    </nav>
     <div class="container py-3">
       <header>
 <!--        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">-->
@@ -44,7 +82,8 @@
       </header>
 
       <main>
-        <div id="panel" class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div id="" class="row row-cols-1 row-cols-md-1 mb-3 text-center" style="margin-left:auto; margin-right:auto; max-width: 500px">
+<!--        <div id="" class="row row-cols-1 row-cols-md-3 mb-3 offset-5 text-center">-->
           <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm">
               <div class="card-header py-3">
@@ -66,9 +105,9 @@
           </div>
         </div>
 
-        <h2 class="display-6 text-center mb-4">Your Driver Details</h2>
+        <h2 class="display-6 text-center mb-4" >Your Driver Details</h2>
 
-        <div class="table-responsive">
+        <div class="table-responsive" >
           <table class="table text-center">
 <!--            <thead>-->
 <!--              <tr>-->

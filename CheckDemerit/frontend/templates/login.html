@@ -11,29 +11,72 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbar">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" id="login" href="/login">Login</a>
-                <a class="nav-item nav-link" id="signup" href="/sign-up">Sign Up</a>
-                <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
-                <a class="nav-item nav-link" id="home" href="/">Home</a>
+                {% if not session['user'] %}
+                <a class="navbar-brand" href="#">Avatar Service Transport Portal</a>                
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/sign-up">Sign Up</a>
+
+                {% else %}
+                <a class="navbar-brand" href="#">Avatar Service Transport Portal</a>
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/check-points">Check Demerit Points</a>
+                <a class="nav-link" href="/check-points/download">Download Report</a>
+                <a class="nav-link" href="/logout">Logout</a>
+                {% endif %}
             </div>
         </div>
     </nav>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+        {% if category == 'error' %}
+        <div class="alert alert-danger alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
     <div class="container">
         {% block content %}
         <form method="POST">
             <h3 align="center">Login</h3>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"/>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="text" class="form-control" id="password" name="password" placeholder="Enter password"/>
-            </div>
+<!--            <div class="form-group">-->
+<!--                <label for="email">Email Address</label>-->
+<!--                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"/>-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="password">Password</label>-->
+<!--                <input type="text" class="form-control" id="password" name="password" placeholder="Enter password"/>-->
+<!--            </div>-->
+                <div class="form-group col-sm-4 offset-md-4">
+                    {{ form.email.label(class_="form-label") }}:
+                    {{ form.email(class_="form-control") }}
+                </div>
+                <div class="form-group col-sm-4 offset-md-4">
+                    {{ form.password.label(class_="form-label") }}:
+                    {{ form.password(class_="form-control") }}
+                </div>
             <br />
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary offset-md-4" >Login</button>
+            <br />
+            <br />
+            <p class="fs-6 text-muted" align="center">Login to check your demerit record. If you don't have an account, you can <a href="/sign-up">Sign Up</a></p>
         </form>
         {% endblock %}
     </div>

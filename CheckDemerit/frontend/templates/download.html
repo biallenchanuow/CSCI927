@@ -3,12 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Download Demerit Record</title>
-    <style>
-      #panel{
-      margin-left:400px;
-      width:1500px
-      }
-    </style>
     <script>
         function download(){
             var button = document.getElementById("download");
@@ -28,6 +22,48 @@
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
       </symbol>
     </svg>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+        {% if category == 'error' %}
+        <div class="alert alert-danger alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                {% if not session['user'] %}
+                <a class="navbar-brand" href="#">Avatar Service Transport Portal</a>
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/login">Login</a>
+
+                {% else %}
+                <a class="navbar-brand" href="#">Avatar Service Transport Portal</a>
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/check-points">Check Demerit Points</a>
+                <a class="nav-link" href="/check-points/download">Download Report</a>
+                <a class="nav-link" href="/logout">Logout</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
 
     <div class="container py-3">
       <main>

@@ -1,0 +1,40 @@
+version: '3.8'
+
+volumes:
+  loginapp5:
+  checkpointsapp5:
+  frontapp5:
+
+services:
+  user-service-checkpoints:
+    container_name: "user-server-checkpoints-f"
+    build:
+      context: ../login
+
+    ports:
+      - "4001:4001"
+    volumes:
+      - loginapp5:/loginapp5
+    restart: always
+
+  checkpoints-service:
+    container_name: "checkpoints-server-f"
+    build:
+      context: ../checkpoints
+
+    ports:
+      - "4002:4002"
+    volumes:
+      - checkpointsapp5:/checkpointsapp5
+    restart: always
+
+
+  frontend-service-checkpoints:
+    container_name: "frontend-server-checkpoints-f"
+    build:
+      context: ../frontend
+    ports:
+      - "4000:4000"
+    volumes:
+      - frontapp5:/frontapp5
+    restart: always

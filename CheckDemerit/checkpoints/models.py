@@ -15,6 +15,7 @@ class UserDemerit(db.Model, UserMixin):
     first_name = db.Column(db.String(200))
     last_name = db.Column(db.String(200))
     dob = db.Column(db.String(200))
+    gender = db.Column(db.String(50))
     licence_no = db.Column(db.String(200))
     demerit = db.Column(db.Integer)
     address1 = db.Column(db.String(300))
@@ -22,6 +23,7 @@ class UserDemerit(db.Model, UserMixin):
     country = db.Column(db.String(100))
     state = db.Column(db.String(100))
     zipcode = db.Column(db.Integer)
+    is_active = db.Column(db.Boolean, default=True)
 
     def serialize(self):
         return {
@@ -29,7 +31,9 @@ class UserDemerit(db.Model, UserMixin):
             'email': self.email,
             'full_name': self.first_name + " " + self.last_name,
             "dob": self.dob,
+            "gender": self.gender,
             'licence_no': self.licence_no,
-            "address": self.address1 + " " + self.address2 + ", " + self.state + " " + str(self.zipcode),
-            'demerit': self.demerit
+            "address": self.address1 + ", " + self.address2 + ", " + self.state + " " + str(self.zipcode),
+            'demerit': self.demerit,
+            "is_active": self.is_active
         }
