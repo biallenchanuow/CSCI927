@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="80a48b9c-687e-4515-b0f1-d315fefbeb62" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1yXUTOrrd0vlkcmQsJLhUZQUjeB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/login" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/api" />
+      <recent name="$PROJECT_DIR$/checkpoints/templates" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/checkpoints" />
+      <recent name="$PROJECT_DIR$/checkpoint" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/login" />
+      <recent name="$PROJECT_DIR$/frontend" />
+      <recent name="$PROJECT_DIR$/checkpoints" />
+      <recent name="$PROJECT_DIR$/frontend/templates" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.app (2)">
+    <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CheckDemerit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/login" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/login/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CheckDemerit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/checkpoints" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/checkpoints/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CheckDemerit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/frontend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/frontend/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app (4)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CheckDemerit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/change_address" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/change_address/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CheckDemerit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/login" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/login/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="user_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CheckDemerit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/checkpoints" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/checkpoints/user_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app (2)" />
+        <item itemvalue="Python.app (3)" />
+        <item itemvalue="Python.app (1)" />
+        <item itemvalue="Python.app (4)" />
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80a48b9c-687e-4515-b0f1-d315fefbeb62" name="Default Changelist" comment="" />
+      <created>1632397435879</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632397435879</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="363" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1633262820457">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="363" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800/-344.-1080.1920.1080@0.0.1280.800" timestamp="1633262820457" />
+    <state x="397" y="278" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1633171616121">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="397" y="278" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.800/-344.-1080.1920.1080@0.0.1280.800" timestamp="1633171616121" />
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1633345841479">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.800/-344.-1057.1920.1057@0.0.1280.800" timestamp="1633344986149" />
+    <state width="1899" height="237" key="GridCell.Tab.0.bottom/0.0.1280.800/-344.-1080.1920.1080@-344.-1080.1920.1080" timestamp="1633089046729" />
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.800/-344.-1080.1920.1080@0.0.1280.800" timestamp="1633345841479" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1633345841464">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.800/-344.-1057.1920.1057@0.0.1280.800" timestamp="1633344986138" />
+    <state width="1899" height="237" key="GridCell.Tab.0.center/0.0.1280.800/-344.-1080.1920.1080@-344.-1080.1920.1080" timestamp="1633089046721" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.800/-344.-1080.1920.1080@0.0.1280.800" timestamp="1633345841464" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1633345841463">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.800/-344.-1057.1920.1057@0.0.1280.800" timestamp="1633344986134" />
+    <state width="1899" height="237" key="GridCell.Tab.0.left/0.0.1280.800/-344.-1080.1920.1080@-344.-1080.1920.1080" timestamp="1633089046715" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.800/-344.-1080.1920.1080@0.0.1280.800" timestamp="1633345841463" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1633345841466">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.800/-344.-1057.1920.1057@0.0.1280.800" timestamp="1633344986146" />
+    <state width="1899" height="237" key="GridCell.Tab.0.right/0.0.1280.800/-344.-1080.1920.1080@-344.-1080.1920.1080" timestamp="1633089046724" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.800/-344.-1080.1920.1080@0.0.1280.800" timestamp="1633345841466" />
+    <state x="141" y="39" key="SettingsEditor" timestamp="1633332154931">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="141" y="39" key="SettingsEditor/0.0.1280.800/-344.-1057.1920.1057@0.0.1280.800" timestamp="1632627448823" />
+    <state x="-132" y="-1027" key="SettingsEditor/0.0.1280.800/-344.-1080.1920.1080@-344.-1080.1920.1080" timestamp="1633089216394" />
+    <state x="141" y="39" key="SettingsEditor/0.0.1280.800/-344.-1080.1920.1080@0.0.1280.800" timestamp="1633332154931" />
+    <state x="295" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1633260299601">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="295" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800/-344.-1080.1920.1080@0.0.1280.800" timestamp="1633260299600" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1633244644447">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800/-344.-1080.1920.1080@0.0.1280.800" timestamp="1633244644447" />
+  </component>
+</project>
