@@ -1,0 +1,48 @@
+version: '3.8'
+
+volumes:
+  loginapp4:
+  appformapp4:
+  schformapp4:
+  frontapp4:
+  
+services:
+  user-service:
+    container_name: user-server-c
+    build:
+      context: ../login
+    ports: 
+      - "5001:5001"
+    volumes:
+      - loginapp4:/loginapp4
+    restart: always
+  
+  application-service:
+    container_name: application-server-c
+    build:
+      context: ../application_form
+    ports: 
+      - "5002:5002"
+    volumes:
+      - appformapp4:/appformapp4
+    restart: always
+  
+  schedule-service:
+    container_name: schedule-server-c
+    build:
+      context: ../schedule
+    ports: 
+      - "5003:5003"
+    volumes:
+      - schformapp4:/schformapp4
+    restart: always
+  
+  frontend-service:
+    container_name: frontend-server-c
+    build:
+      context: ../frontend
+    ports: 
+      - "5000:5000"
+    volumes:
+      - frontapp4:/frontapp4
+    restart: always
