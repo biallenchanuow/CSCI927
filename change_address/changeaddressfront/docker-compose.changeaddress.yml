@@ -1,0 +1,27 @@
+version: '3.8'
+
+volumes:
+  addfront:
+  addre:
+  
+services:
+  backend:
+    container_name: address
+    build:
+      context: ../address
+    ports: 
+      - "3001:3001"
+    volumes:
+      - addre:/addre
+    restart: always
+  
+  
+  changeaddressfront:
+    container_name: add_front
+    build:
+      context: ../changeaddressfront
+    ports: 
+      - "3000:3000"
+    volumes:
+      - addfront:/addfront
+    restart: always

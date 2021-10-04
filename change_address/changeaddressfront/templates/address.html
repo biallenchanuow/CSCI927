@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+
+{% block pageContent %}
+<div class="container mt-5" style="max-width: 960px">
+    <div class="py-5 text-center">
+        <h2>Change Address Form</h2>
+        <p class="lead">This form is used to change your address with government.</p>
+    </div>
+
+
+    <div class="col-lg-12">
+        <h4 class="mb-3">Basic Information</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+
+                    </tr>
+
+                    <tr>
+                        <td>{{ first_name }}</td>
+                        <td>{{ last_name }}</td>
+                        <td>{{ gender }}</td>
+                    </tr>
+
+                    <tr>
+                        <th>Date of birth</th>
+                        <th>Email</th>
+                        <th>Licence No.</th>
+                    </tr>
+
+                    <tr>
+                        <td>{{ dob }}</td>
+                        <td>{{ email }}</td>
+                        <td>{{ licence_no }}</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <form method="post">
+            {{ form.hidden_tag() }}
+            <hr class="my-4">
+            <h4 class="mb-3">Residential Address</h4>
+            <div class="row g-3">
+                <div class="form-group col-sm-12">
+                    {{ form.address1.label(class_="form-label") }}:
+                    {{ form.address1(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-12">
+                    {{ form.address2.label(class_="form-label") }}:
+                    {{ form.address2(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-4">
+                    {{ form.country.label(class_="form-label") }}:
+                    {{ form.country(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-4">
+                    {{ form.state.label(class_="form-label") }}:
+                    {{ form.state(class_="form-control") }}
+                </div>
+
+                <div class="form-group col-sm-4">
+                    {{ form.zipcode.label(class_="form-label") }}:
+                    {{ form.zipcode(class_="form-control") }}
+                </div>
+
+                <div class="col text-center">
+                    {{ form.submit(class="w-25 btn btn-primary mt-3")}}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
