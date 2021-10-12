@@ -12,8 +12,8 @@ blueprint = Blueprint("blueprint", __name__, url_prefix="/api/checkpoints")
 #     user_demerit = UserDemerit.query.get(id)
 #     return user_demerit.serialize()
 
-USER_API_URL = 'http://user-server-checkpoints-b:4001'
-CHECKPOINTS_API_URL = 'http://checkpoints-server-b:4002'
+USER_API_URL = 'http://user-server-checkpoints-g:4001'
+CHECKPOINTS_API_URL = 'http://checkpoints-server-g:4002'
 
 
 @blueprint.route("/update/<email>", methods=['POST'])
